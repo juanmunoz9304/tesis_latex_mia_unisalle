@@ -1,0 +1,43 @@
+\chapter{Objetivos}
+\section{Objetivo general}
+
+Desarrollar un modelo que estime señales rPPG para que clasifique el estrés psicofisiológico en dos 
+categorías a partir de video, evaluando su comportamiento ante condiciones sintéticas y 
+controladas de degradación lumínica.
+%en la base de datos UBFC-Phys, con el fin de aportar 
+%evidencia sobre la viabilidad de estas técnicas en escenarios de iluminación no ideal.
+
+\vspace{0.5cm}
+\section{Objetivos específicos}
+\begin{itemize}
+
+    \item Seleccionar la técnica para extraer señales rPPG identificadas en la revisión 
+    de literatura frente a cambios en las condiciones de iluminación.
+
+    % Identificar técnicas mediante la revisión de literatura 
+    % %los principales métodos tradicionales
+    % % y de aprendizaje profundo utilizados 
+    %  para extraer señales rPPG, así como sus limitaciones 
+    %  frente a cambios en las condiciones de iluminación, y seleccionar técnicas mas adecuadas 
+    %  para el diseño del modelo propuesto.
+
+    \item Preparar un conjunto de datos a partir de videos
+    % de reposo (T1) y estrés (T3) de 
+    % la base de datos UBFC-Phys, 
+    extrayendo la región facial de interés y generando tres 
+    condiciones de iluminación.
+    % : la original y dos niveles de atenuación sintética, 
+    % correspondientes al 50\% y 20\% de luz residual.
+
+    \item Construir el modelo de estimación de rPPG y clasificación del estrés psicofisiológico 
+    % (T1 vs. T3),
+     integrando los métodos y técnicas seleccionadas en la revisión de literatura y 
+    entrenándolo con el conjunto de datos preparado.
+
+    \item Evaluar el desempeño del modelo mediante métricas de error para la estimación de la 
+    señal rPPG y métricas de precisión para la clasificación del estrés.
+    % , comparando los 
+    % resultados obtenidos en las condiciones de iluminación reducida con los de la condición 
+    % original y con los valores de referencia reportados en la literatura para UBFC-Phys.
+
+\end{itemize}

@@ -1,0 +1,38 @@
+\chapter{Justificación}\label{chapter:PA}
+
+La fotopletismografía remota (rPPG) tiene el potencial de revolucionar el monitoreo del estrés clínico mediante el análisis no invasivo de la Variabilidad de la 
+Frecuencia Cardíaca (HRV). Sin embargo, es de vital importancia abordar el impacto de la iluminación deficiente porque el éxito actual de estos sistemas está 
+fuertemente sesgado hacia condiciones ideales, impidiendo su uso masivo. Al diseñar e implementar métodos de rPPG, la gran mayoría de los investigadores asumen 
+condiciones operativas ideales, pasando por alto las enormes complejidades de desplegar estos sistemas en entornos del mundo real \cite{casado2024design}. 
+Z. Yang y otros confirman este sesgo metodológico al señalar que los estudios existentes exploran casi exclusivamente condiciones de laboratorio con buena 
+iluminación, ignorando que en los espacios interiores reales la distribución de la luz es irregular y sufre variaciones frecuentes \cite{yang2022assessment_dl}. 
+Esta dependencia de la luz perfecta evidencia un vacío crítico y demuestra la necesidad urgente de evaluar esta tecnología en escenarios realistas y cotidianos 
+donde la iluminación fluctúa drásticamente.\\
+
+El impacto de la oscuridad en la precisión del diagnóstico es un problema que no se ha logrado resolver mediante preprocesamiento visual clásico. Al evaluar 
+arquitecturas profundas (como DeepPhys y PhysFormer) frente a videos con iluminación reducida, S. Chen, K. Wong y otros demostraron en sus métricas que aplicar filtros 
+tradicionales de mejora de imagen (como la Ecualización de Histograma y LIME) en realidad empeora el Error Absoluto Medio (MAE) y destruye la señal rPPG \cite{chen2024image_en}. Peor 
+aún, la fiabilidad clínica se rompe precisamente cuando el paciente experimenta estrés en la oscuridad. En sus ensayos experimentales, B. Acharya y W Saakyan comprobaron 
+a nivel práctico que cuando se evalúan los modelos ante la combinación simultánea de un ritmo cardíaco elevado (estrés) y baja iluminación (oscuridad), los errores 
+de estimación de las redes se disparan drásticamente, demostrando que ningún método actual logra un rendimiento consistente bajo estas dos presiones simultáneas \cite{acharya2025reliability}.
+
+Frente a esta desventaja óptica, es ideal encontrar una alternativa de robustez entre las arquitecturas de extracción local, como podrían ser las Redes 
+Neuronales Convolucionales (CNN), y las de atención global, como los Vision Transformers (ViT), ya que los experimentos recientes revelan fallas estructurales en 
+ambas topologías al enfrentar ruido \cite{chang2025physvim}. Por un lado, al desarrollar sus nuevos modelos de procesamiento temporal como PhysVim, donde Z. Chang y otros, identificaron a nivel práctico que la 
+principal limitación de las CNN por si solas es su campo receptivo local, una debilidad arquitectónica que les impide modelar dependencias espacio-temporales largas y 
+provoca fallos sistémicos cuando la imagen presenta ruido. Aunque los ViT prometen una atención sobre todo el rostro, los experimentos de 
+N. Nguyen, L. Nguyen y otros, demostraron su fragilidad en entornos complejos: al someter arquitecturas ViT (como EfficientPhys y ContrastPhys) a oclusión, pérdida de calidad, 
+compresión de bits y ruido espacial sintético, sus tablas de resultados evidenciaron un colapso drástico en la precisión de los Transformers frente a la 
+degradación visual \cite{nguyen2024artifact_resilience}.\\
+
+Aportar a la resolución de este problema otorgará beneficios directos a la ingeniería biomédica al responder de qué manera afecta la iluminación deficiente a la 
+precisión del diagnóstico de estrés. Los hallazgos establecerán una frontera medible que determine en qué punto la oscuridad contamina la señal rPPG y 
+altera el HRV. Esto es una necesidad ya que los experimentos en laboratorio de Z. Yang, H. Wang y F. Lu demuestran que, aunque las redes profundas funcionan bien con 
+buena luz, tienden a colapsar debido a la falta datasets con objetivos específicos pero diferente iluminación \cite{yang2022assessment_dl}. Operar con base a está degradación desde el principio
+evitará el efecto cascada, impidiendo que una mala señal óptica genere un falso diagnóstico psicológico.\\
+
+% DESPUÉS
+Este proyecto de investigación busca contribuir a la exploración de sensores no invasivos, accesibles y económicos mediante el uso de tecnologías de fotopletismografía
+remota (rPPG). Al identificar y evaluar qué arquitecturas de aprendizaje profundo ofrecen mayor resistencia ante condiciones de iluminación baja, el 
+estudio pretende facilitar la detección temprana del estrés, permitiendo intervenciones preventivas antes de que se manifiesten trastornos crónicos de 
+salud mental.
