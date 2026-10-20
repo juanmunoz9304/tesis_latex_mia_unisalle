@@ -155,6 +155,27 @@ Por otro lado, se han desarrollado arquitecturas concebidas desde su origen para
 de iluminación de 1 a 100 lux \cite{cao2024stphys}. Del mismo modo, el modelo UDA-rPPG emplea una red espacio-temporal (LS-Phys) junto con un módulo de realce 
 geométrico (GAEM) para asegurar la detección del rostro y extraer la señal rPPG en escenarios críticos de penumbra de entre 1.0 y 3.0 lux \cite{wu2026udarppg}.
 
+
+A continuación se abordan los algoritmos de aprendizaje profundo para la extracción de rPPG y las métricas trabajadas en el desarrollo y evaluación de los
+algoritmos:
+
+\begin{table}[htbp] 
+    \centering 
+    \caption{Métricas de los algoritmos de aprendizaje profundo para la extracción rPPG} 
+    \label{tab:metricas_algoritmos} 
+    \begin{tabular}{|p{2.5cm}|p{2.3cm}|p{3.2cm}|p{4.8cm}|} 
+        \hline 
+        \textbf{Algoritmo} & \textbf{Métricas de evaluación} & \textbf{Resultados} & \textbf{Detalles de evaluación} \\ \hline
+        % Juanda
+
+
+        % Juanse
+        PhysNet & \textbf{RMSE} y \textbf{R} (Correlación de Pearson) & RMSE: (1.812 BPM), R: 0.992 & Compararón contra métodos tradiconales como POS y CHROM \\ \hline
+    \end{tabular}
+\end{table}
+
+
+
 % Hablando sobre los datasets y de donde suele salir la información para esto?
 
 \newpage
